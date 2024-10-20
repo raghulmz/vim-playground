@@ -6,6 +6,7 @@ g.mapleader = " "
 
 o.scrolloff = 999
 o.relativenumber = true
+o.number = true
 opt.virtualedit = { "block" }
 o.inccommand = "split"
 o.listchars = "space:␣,eol:$,tab:>-,trail:~"
