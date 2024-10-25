@@ -24,7 +24,7 @@ return {
                                 gitsigns.nav_hunk('next')
                             end
                         end,
-                        "next hunk"
+                        { desc = "next hunk" }
                     )
 
                     map('n', '[c', function()
@@ -34,7 +34,7 @@ return {
                                 gitsigns.nav_hunk('prev')
                             end
                         end,
-                        "previous hunk"
+                        { desc = "previous hunk" }
                     )
 
                     -- Actions
