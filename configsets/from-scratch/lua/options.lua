@@ -13,3 +13,5 @@ o.listchars = "space:␣,eol:$,tab:>-,trail:~"
 o.shiftwidth = 4
 o.tabstop = 4
 o.expandtab = true
+
+o.clipboard = 'unnamedplus'
