@@ -80,4 +80,4 @@ map("n", "<leader>d", "<cmd>bdelete<CR>", { desc = "Delete buffer" })
 
 -- Noice --
 map("n", "<leader>nd", "<cmd>:Noice dismiss<cr>", {desc="Dismiss noice messages."})
-map("n", "<leader>nh", "<cmd>:Noice history<cr>", {desc="Previous noice message."})
+map("n", "<leader>nh", "<cmd>:Noice history<cr>", {desc="Noice message history."})
