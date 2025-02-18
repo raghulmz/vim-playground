@@ -78,6 +78,14 @@ return {
                 },
             },
         },
-    }
+    },
+
+    init = function(plugin)
+        require("lazy.core.loader").add_to_rtp(plugin)
+        require("nvim-treesitter.query_predicates")
+    end,
+    config = function(_, opts)
+        require('nvim-treesitter.configs').setup(opts)
+    end,
 
 }

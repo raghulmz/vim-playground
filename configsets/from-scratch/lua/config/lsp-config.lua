@@ -20,3 +20,6 @@ require 'lspconfig'.lua_ls.setup {
 }
 require 'lspconfig'.rust_analyzer.setup {}
 require 'lspconfig'.jdtls.setup {}
+require 'lspconfig'.ruff.setup {}
+require 'lspconfig'.pyright.setup {}
+require 'lspconfig'.groovyls.setup {}

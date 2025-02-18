@@ -37,13 +37,10 @@ map("n", "<leader>wl", function()
 end, opts "List workspace folders")
 
 map("n", "<leader>D", vim.lsp.buf.type_definition, opts "Go to type definition")
--- map("n", "<leader>ra", require "nvchad.lsp.renamer", opts "NvRenamer")
 
 map({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts "Code action")
 map("n", "gr", vim.lsp.buf.references, opts "Show references")
 
--- vim.api.nvim_set_keymap('n', '<leader>rn', '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
--- vim.api.nvim_set_keymap('v', '<leader>rn', '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
 map("n", "<leader>rn", function()
     return ":IncRename " .. vim.fn.expand("<cword>")
 end, { expr = true })
@@ -76,5 +73,11 @@ map(
     { desc = "telescope find all files" }
 )
 
+-- Cycle through buffers
+map("n", "<leader>]", "<cmd>bnext<CR>", { desc = "Next buffer" })
+map("n", "<leader>[", "<cmd>bprevious<CR>", { desc = "Previous buffer" })
+map("n", "<leader>d", "<cmd>bdelete<CR>", { desc = "Delete buffer" })
+
 -- Noice --
-map("n", "<leader>dn", "<cmd>:Noice dismiss<cr>", {desc="Dismiss noice messages."})
+map("n", "<leader>nd", "<cmd>:Noice dismiss<cr>", {desc="Dismiss noice messages."})
+map("n", "<leader>nh", "<cmd>:Noice history<cr>", {desc="Previous noice message."})
